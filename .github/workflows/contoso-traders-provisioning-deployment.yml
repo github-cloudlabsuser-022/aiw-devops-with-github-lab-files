@@ -1,4 +1,5 @@
- uses:name: contoso-traders-app-deployment
+
+  uses:name: contoso-traders-app-deployment
 
 on:
   workflow_dispatch:
@@ -266,7 +267,8 @@ jobs:
           node-version: 14
         run: npm install
         working-directory: src/ContosoTraders.Ui.Website
-      - name: npm run build        run: npm run build
+      - name: npm run build
+        run: npm run build
         working-directory: src/ContosoTraders.Ui.Website
       - name: deploy to storage
         uses: azure/CLI@v1
