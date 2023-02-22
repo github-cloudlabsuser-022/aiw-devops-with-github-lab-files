@@ -264,7 +264,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
-        working-directory: src/ContosoTraders.Ui.Website
       - name: npm run build
         run: npm run build
         working-directory: src/ContosoTraders.Ui.Website
