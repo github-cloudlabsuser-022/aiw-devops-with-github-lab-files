@@ -1,4 +1,5 @@
-name: contoso-traders-app-deployment
+
+  uses:name: contoso-traders-app-deployment
 
 on:
   workflow_dispatch:
@@ -261,6 +262,9 @@ jobs:
           CARTS_API_ENDPOINT: ${{ steps.get-cartsApiEndpoint.outputs.cartsApiEndpoint }}
           PRODUCTS_API_ENDPOINT: ${{ steps.get-productsApiEndpoint.outputs.productsApiEndpoint }}
       - name: npm install
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
         run: npm install
         working-directory: src/ContosoTraders.Ui.Website
       - name: npm run build
