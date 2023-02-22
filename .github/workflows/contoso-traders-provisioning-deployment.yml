@@ -1,5 +1,4 @@
-
-  uses:name: contoso-traders-app-deployment
+name: contoso-traders-app-deployment
 
 on:
   workflow_dispatch:
